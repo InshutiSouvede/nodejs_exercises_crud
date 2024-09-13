@@ -19,7 +19,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use('/students',studentRoutes)
 app.get('/',(req,res)=>{
-    res.send("Welcom to students portal")
+    res.send("Welcome to students portal")
 })
 const PORT = process.env.PORT || 3000
 app.listen(PORT,(err)=>{

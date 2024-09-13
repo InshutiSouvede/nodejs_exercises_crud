@@ -32,7 +32,7 @@ const addStudent = async (req,res)=>{
 const updateStudent = async (req,res)=>{
     try {
         const id = req.params.id
-        const student = await Student.findByIdAndUpdate(id,req.body);
+        const student = await Student.findByIdAndUpdate(id,{...req.body});
         res.json(student).status(200)        
     } catch (error) {
         console.log(error.message)
